@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTORIAL CALCULATOR</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            }
+        h3{
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background: transparent;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.6); 
+        }
+        .fact{
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: transparent;
+        }
+        div{
+            width: 25rem;
+            height: 28rem;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.199);
+            box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+            border-radius: 30px;
+            border-left: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid rgba(255,255,255,0.3);
+            
+        }
+        label{
+            font-family: sans-serif;
+            font-size: 30px; 
+            color: white;
+            margin-left: 10%;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+        }
+        input{
+            font-size: 30px;
+            width: 80%;
+            margin: 5% auto;
+            margin-bottom: 8%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.6); 
+        }
+        button{
+            width: 50%;
+            margin: 3% auto;
+            color: white;
+            font-size: 15px;
+            background: rgba(255,255,255,0.6);
+            padding: 10px 30px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.6);
+            border-left: 2px solid rgba(255,255,255,0.3);
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body background="http://hpc-asia.com/wp-content/uploads/2016/02/equations.jpg">
+    <h3>FACTORIAL CALCULATOR USING HTML , CSS AND JAVASCRIPT <br> YOU CAN FIND THE FACTORIAL OF GIVEN NUMBER HERE </h3>
+    <div class="fact">
+            <label>Enter A Number : </label><br>
+            <input id="num"><br><br>
+            <button onclick="show()">FACTORIAL</button> <br><br>
+            <label>Factorial OF The Number : </label><br>
+            <input id="answer">
+    </div>
+</body>
+</html>
+<script>
+    function show() {
+        var i, no, fact;
+        fact = 1;
+        no = Number(document.getElementById('num').value);
+        for(i=1; i<=no; i++){
+            fact = fact * i;
+        }
+        document.getElementById('answer').value = fact;
+    }
+</script>
